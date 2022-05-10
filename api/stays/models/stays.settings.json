@@ -1,0 +1,64 @@
+{
+  "kind": "collectionType",
+  "collectionName": "stays",
+  "info": {
+    "name": "stays",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "location": {
+      "type": "string"
+    },
+    "price": {
+      "type": "integer"
+    },
+    "guest": {
+      "type": "integer"
+    },
+    "bedroom": {
+      "type": "integer"
+    },
+    "bed": {
+      "type": "integer"
+    },
+    "bathroom": {
+      "type": "integer"
+    },
+    "info": {
+      "type": "text"
+    },
+    "mainImage": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "otherImages": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    }
+  }
+}
